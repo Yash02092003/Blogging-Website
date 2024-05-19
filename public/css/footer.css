@@ -1,0 +1,98 @@
+footer{
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 2vw 2vw;
+    margin-top: 5vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#footer-1{
+    font-size: min(1vw, 100px);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer img{
+    height: 50px;
+    width: 50px;
+    /* background-color: white; */
+    background-blend-mode: difference;
+}
+
+#footer-1 #part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+#footer-1 #part2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2vw;
+    width: 40%;
+    padding: 1vw 1vw;
+
+}
+
+#footer-1 #part3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    gap: 2.5vw;
+    width: 30%;
+    padding: 1vw 1vw;
+}
+
+#footer-1 #part2 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    width: 100%;
+}
+
+#footer-2{
+    margin: 3vw 0vw;
+    border-top: 2px solid white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    font-size: min(1.2vw, 100px);
+    padding-top: 2vw;
+}
+
+footer input{
+    width: 15vw;
+    height: 4.8vh;
+    font-size: min(1.2vw, 100px);
+    padding: 0 1vw;
+}
+
+footer button{
+    height: 5vh;
+    width: 10vw;
+    font-size: min(1vw, 100px);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 128, 0);
+    color: white;
+}

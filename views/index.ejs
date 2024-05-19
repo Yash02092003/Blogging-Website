@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium</title>
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/blogs.css">
+    <link rel="icon" href="/assessts/medium.png">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div id="page-1">
+            <h1 style="text-align: right; padding-right: 10vw; font-size: 3vw; font-weight: 400; width: 100%;">Latest Post</h1>
+            <div id="blogs">
+                <% let i = 1 %>
+                <% for (let blog of blogs) { %>
+                    <div id="blog">
+                        <img src="<%= blog.img %>" alt="">
+                        <div id="inner-blog">
+                            <p><%= blog.content %></p>
+                            <button type="submit"><a href="/blogs/<%= blog._id %>">Read More</a></button>
+                        </div>
+                    </div>
+                    <% i++ %>
+                    <% if( i > 5) { %>
+                    <% break %>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <div id="page-2" style="color: black;">
+            <h1 style="margin-left: 10vw; font-size: 3vw; font-weight: 400;">All Posts</h1>
+            <div id="page-2-content">
+            <% for (let blog of blogs) { %>
+                <div class="blog" data-id="<%= blog._id %>">
+                    <div class="img"><img src="<%= blog.img %>" alt=""></div>
+                    <div class="content">
+                        <p><%= blog.content %></p>
+                        <div class="functions">
+                            <button class="like-btn"><i class="fa-regular fa-thumbs-up"></i><span class="like" data-id="<%= blog._id %>"><%= blog.likes %></span></button>
+                            <button class="dislike-btn"><i class="fa-regular fa-thumbs-down"></i><span class="dislike" data-id="<%= blog._id %>"><%= blog.dislikes %></span></button>
+                            <button class="read"><a href="blogs/<%= blog._id %>">Read More</a></button>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+            </div>
+        </div>      
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="https://kit.fontawesome.com/a84a69e726.js" crossorigin="anonymous"></script>
+    <script src="/js/blogs.js"></script>
+</body>
+</html>

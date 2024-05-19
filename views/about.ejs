@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <section class="about-section">
+            <div class="about-header">
+                <h1>About Us</h1>
+                <p>Welcome to our blog! We are passionate about sharing insightful content with our readers.</p>
+            </div>
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://media.istockphoto.com/id/1241341642/photo/smiling-indian-guy-with-laptop-computer-working-or-studying-online-on-lilac-background.jpg?s=2048x2048&w=is&k=20&c=6NvuOuzjSl8TlCTcxwnM4AJcyNh1XKWtb-yS9VNqZm4=" alt="Team Member 1">
+                        <h3>John Doe</h3>
+                        <p>Founder & Editor-in-Chief</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://media.istockphoto.com/id/1633556136/photo/photo-of-positive-cheerful-guy-wear-plaid-yellow-shirt-arm-spectacles-holding-copybooks.jpg?s=2048x2048&w=is&k=20&c=8ZXkuq0eV7PsGYVJ6hQEo3xDNw06lLTJbIMChfCtWwg=" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>Senior Writer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://media.istockphoto.com/id/1035588450/photo/young-handsome-student-man-with-curly-hair-in-glasses-and-in-checkered-shirt-showing-ok-sign.jpg?s=2048x2048&w=is&k=20&c=MA9A3H23EWd-2TSrq-3Lt63NIy6ojdtz0e2snPFfzXs=" alt="Team Member 3">
+                        <h3>Emily Johnson</h3>
+                        <p>Content Strategist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-section">
+                <h2>Join Our Community</h2>
+                <p>Stay updated with the latest posts and insights. Subscribe to our newsletter!</p>
+                <a href="/subscribe" class="cta-button">Subscribe Now</a>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

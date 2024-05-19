@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    color: #111;
+}
+
+.privacy-container {
+    min-width: 100vh;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2vw auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #111;
+}
+
+.privacy-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: green;
+}
+
+.privacy-container section {
+    margin-bottom: 2rem;
+}
+
+.privacy-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: green;
+}
+
+.privacy-container p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #111;
+}
+
+footer{
+    margin-top: 0;
+}

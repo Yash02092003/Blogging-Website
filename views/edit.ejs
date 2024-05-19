@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/blogs/<%= blog._id %>/edit?_method=PATCH" method="post" enctype="multipart/form-data">
+        <div>
+            <img src="<%= blog.img %>" alt="">
+            <label for="img">Upload New Img</label>
+            <input type="file" placeholder="upload new img" name="img" id="img">
+        </div>
+
+        <div>
+            <label for="Con">Content</label>
+            <input type="text" value="<%= blog.content %>" name="content" id="Con">
+        </div>
+
+        <button type="submit">Edit Blog</button>
+    </form>
+</body>
+</html>

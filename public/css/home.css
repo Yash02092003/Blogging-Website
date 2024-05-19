@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+}
+
+#page-1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#page-1-part1{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    border: 1px solid gray;
+    border-radius: 10px;
+
+}
+
+#page-1-part2{
+    height: 80%;
+    width: 40%;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-1-part2 img{
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#page-1-part1 div{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+#page-1-part1 button{
+    height: 5vh;
+    width: 10vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 128, 0);
+    color: white;
+}
+
+#page-2{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+#page-2 #blogs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+#page-2 #blog{
+ display: flex;
+ height: 35vh;
+ width: 80%;
+ justify-content: flex-start;
+ gap: 2vw;
+ padding: 1vw 1vw;
+ border: 1px solid gray;
+ border-radius: 10px;
+}
+
+#page-2 #blog img{
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+#page-2 #inner-blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    align-items: flex-end;
+    font-size: 1.5vw;
+}
+
+#page-2 #inner-blog button{
+    height: 5vh;
+    width: 10vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 128, 0);
+}
+
+
+#page-3{
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+    /* padding: 1vw 1vw; */
+    padding-top: 10vh;
+}
+
+#page-3 #blogs{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    overflow-x: scroll;
+}
+
+#page-3 #blog{
+ display: flex;
+ height: 40vh;
+ min-width: 35vw;
+ gap: 2vw;
+ padding: 1vw 1vw;
+ border: 1px solid gray;
+ border-radius: 10px;
+}
+
+#page-3 #blogs::-webkit-scrollbar{
+    width: 1px;
+    height: 0;
+}
+
+#page-3 #blog img{
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+#page-3 #inner-blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    align-items: flex-end;
+    font-size: 1vw;
+}
+
+#page-3 #inner-blog button{
+    height: 5vh;
+    width: 10vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 128, 0);
+}
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#page-4-part1{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 50vh;
+    margin: 1vw auto;
+    margin-top: 5vw;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 2vw 2vw;
+}
+
+.page-4-text{
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2vw;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 50%;
+    padding: 2vw 1vw;
+}
+
+.page-4-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-4-img img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 70%;
+    border-radius: 5px;
+}
+
+.page-4-text .inp input{
+    width: 20vw;
+    height: 5vh;
+    font-size: 1.2vw;
+    padding: 0 1vw;
+}
+
+.page-4-text button{
+    height: 5vh;
+    width: 10vw;
+    font-size: 1vw;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(45, 128, 0);
+    color: white;
+}
+
+
+
+

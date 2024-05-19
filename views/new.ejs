@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="icon" href="/assessts/medium.png">
+</head>
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <main>
+        <form id="blogForm" action="/blogs/new" method="post" enctype="multipart/form-data" class="form">
+            <div class="form-group">
+                <label for="image">Image File:</label>
+                <div id="drop-zone">
+                    <p>Drag & drop an image here or click to select a file</p>
+                    <input type="file" name="img" id="image" required>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea name="content" id="content" minlength="20" placeholder="Enter Content For Blog here" required></textarea>
+            </div>
+    
+            <button type="submit" class="submit-btn">Add New Blog</button>
+        </form>
+    </main>
+    <script src="/js/new.js"></script>
+</body>
+</html>

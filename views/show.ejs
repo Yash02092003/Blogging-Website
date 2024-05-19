@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+    <div class="blog-container">
+        <div class="blog">
+        <div class="img-container"><img src="<%= blog.img %>" alt="blog img"></div>
+        <div class="content-container">
+            <div class="blog-c-1">
+                <p><%= blog.content  %></p>
+                <div class="lk-dlk">
+                <span><i class="fa-solid fa-thumbs-up"></i><%= blog.likes %></span>
+                <span><i class="fa-solid fa-thumbs-down"></i><%= blog.dislikes %></span>
+                </div>
+            </div>
+        <div class="functions">
+        <% if(currentUser && currentUser.created.includes(blog._id)) { %>
+        <form action="/blogs/<%= blog.id %>?_method=DELETE" method="post">
+            <button type="submit">Delete Blog</button>
+        </form>
+        <button><a href="/blogs/<%= blog._id %>/edit">Edit Your Blog</a></button>
+        <% } %>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="comment-container">
+        <h1 style="font-size: 2vw; font-weight: 400; font-style: italic;">Comments </h1>
+        <% for (let cmnt of blog.comment) {%>
+            <div class="comment"><%= cmnt %></div>
+            <br>
+        <% } %>
+        <form action="/blogs/<%= blog._id %>/comment" method="POST" class="comment-form">
+            <div class="form-group">
+                <label for="comment" style="font-size: 1.5vw; font-style: italic;">Add a comment</label>
+                <textarea name="comment" id="comment" placeholder="Write your comment here..." required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+   
+
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="https://kit.fontawesome.com/a84a69e726.js" crossorigin="anonymous"></script>
+</body>
+</html>

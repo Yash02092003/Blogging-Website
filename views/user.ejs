@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div class="dashboard-container">
+            <div class="card user-info">
+                <h1>Welcome, <%= user.username %>!</h1>
+                <h2>Email: <%= user.email %></h2>
+            </div>
+            
+            <div class="card blogs-section">
+                <h2>Liked Blogs</h2>
+                <div class="blogs-container">
+                    <% user.likes.forEach(blog => { %>
+                        <div class="blog-card">
+                            <h3><%= blog.title %></h3>
+                            <p><%= blog.content.substring(0, 100) %>...</p>
+                            <a href="/blogs/<%= blog._id %>">Read More</a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+            
+            <div class="card blogs-section">
+                <h2>Created Blogs</h2>
+                <div class="blogs-container">
+                    <% user.created.forEach(blog => { %>
+                        <div class="blog-card">
+                            <h3><%= blog.title %></h3>
+                            <p><%= blog.content %>...</p>
+                            <a href="/blogs/<%= blog._id %>">Read More</a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+            
+            <div class="card blogs-section">
+                <h2>Saved Blogs</h2>
+                <div class="blogs-container">
+                    <% user.saved.forEach(blog => { %>
+                        <div class="blog-card">
+                            <h3><%= blog.title %></h3>
+                            <p><%= blog.content.substring(0, 100) %>...</p>
+                            <a href="/blogs/<%= blog._id %>">Read More</a>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
