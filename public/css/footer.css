@@ -96,3 +96,79 @@ footer button{
     background-color: rgb(45, 128, 0);
     color: white;
 }
+
+@media screen and (max-width : 600px) {
+    footer{
+        min-height: 30vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        color: white;
+        padding: 2vw 2vw;
+        margin-top: 5vw;
+    }
+
+    #footer-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 1vw;
+    }
+
+    #footer-1 #part1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        gap: 2vw;
+        font-size: 1.5vw;
+    }
+
+    #footer-1 #part2{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        font-size: 2vw;
+        justify-content: space-between;
+    }
+
+    #footer-1 img{
+        height: 40px;
+        width: 40px;
+        /* background-color: white; */
+        background-blend-mode: difference;
+    }
+
+    #footer-1  #part3{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2vw;
+    }
+
+    #footer-1 #part3 br{
+        display: none;
+    }
+
+    #footer-1 input{
+        width: 30vw;
+        font-size: 2vw;
+    }
+
+    #footer-1 button{
+        width: 20vw;
+        font-size: 2vw;
+    }
+
+    #footer-2{
+        font-size: 2.5vw;
+    }
+    
+}

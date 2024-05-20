@@ -1,32 +1,70 @@
 <nav>
-    <div id="nav-part1">
-        <img src="/assessts/medium.png" alt="">
-        <span>Medium</span>
+    <div id="nav1">
+        <div id="nav-part1">
+            <img src="/assessts/medium.png" alt="">
+            <span>Medium</span>
+        </div>
+    
+        <div id="nav-part2">
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact us</a>
+        </div>
+    
+        <div id="nav-part3">
+    
+            <% if(!currentUser) { %>
+            <button><a href="/login">Login</a></button>
+            <% } %>
+    
+            <% if(!currentUser) { %>
+            <button style="background-color: white;"><a href="/register" style="color: black;">Signup</a></button>
+            <% } %>
+    
+            <% if(currentUser) { %>
+            <button><a href="/blogs/new" style="color: black;">New Blog</a></button>
+            <% } %>
+    
+            <% if(currentUser) { %>
+                <button style="background-color: white;"><a href="/logout" style="color: black;">Logout</a></button>
+            <% } %>
+        </div>
     </div>
 
-    <div id="nav-part2">
-        <a href="/">Home</a>
-        <a href="/blogs">Blogs</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact us</a>
-    </div>
+    <div id="nav2">
+        <div id="nav2-part1">
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact us</a>
+        </div>
 
-    <div id="nav-part3">
+        <div id="nav2-part2">
+            <div id="nav2-part2-1">
+                <img src="/assessts/medium.png" alt="">
+                <span>Medium</span>
+            </div>
 
-        <% if(!currentUser) { %>
-        <button><a href="/login">Login</a></button>
-        <% } %>
+            <div id="nav2-part1-1">
+                <% if(!currentUser) { %>
+                    <button><a href="/login">Login</a></button>
+                    <% } %>
+            
+                    <% if(!currentUser) { %>
+                    <button style="background-color: white;"><a href="/register" style="color: black;">Signup</a></button>
+                    <% } %>
+            
+                    <% if(currentUser) { %>
+                    <button><a href="/blogs/new" style="color: black;">New Blog</a></button>
+                    <% } %>
+            
+                    <% if(currentUser) { %>
+                        <button style="background-color: white;"><a href="/logout" style="color: black;">Logout</a></button>
+                    <% } %>
+            </div>
 
-        <% if(!currentUser) { %>
-        <button style="background-color: white;"><a href="/register" style="color: black;">Signup</a></button>
-        <% } %>
-
-        <% if(currentUser) { %>
-        <button><a href="/blogs/new" style="color: black;">New Blog</a></button>
-        <% } %>
-
-        <% if(currentUser) { %>
-            <button style="background-color: white;"><a href="/logout" style="color: black;">Logout</a></button>
-        <% } %>
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
 </nav>

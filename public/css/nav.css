@@ -1,4 +1,4 @@
-nav{
+#nav1{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,4 +55,88 @@ nav button{
 
 nav button:hover{
     cursor: pointer;
+}
+
+#nav2{
+    display: none;
+}
+
+@media screen and (max-width : 600px) {
+    #nav1{
+        display: none;
+    }
+
+    #nav2{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 10vh;
+    }
+
+    #nav2{
+        overflow: visible;
+
+    }
+
+    #nav2-part1{
+        position: absolute;
+        bottom: 200%;
+        background-color: black;
+        min-height: 20vh;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2vw;
+        padding: 2vw;
+        align-items: flex-end;
+        z-index: 1;
+        transition: all ease 1s;
+    }
+
+    #nav2-part1-1{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 3vw;
+        align-items: center;
+    }
+
+    #nav2-part1-1 button{
+        width: 20vw;
+        height: 5vh;
+        font-size: 3vw;
+    }
+
+    #nav2-part2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        padding: 2vw;
+        gap: 3vw;
+        position: relative;
+        z-index: 2;
+    }
+
+    #nav2-part2-1{
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    font-size: 2vw;
+    width: 30%;
+    color: white;
+    }
+
+    #nav2 img{
+        height: 100%;
+    }
+
+    #nav2 i{
+        color: white;
+    }
+    
 }

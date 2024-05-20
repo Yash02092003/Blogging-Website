@@ -15,11 +15,11 @@
         <div id="page-1">
             <div id="page-1-part1">
                 <div>
-                    <h1 style="font-size: 2.3vw; font-weight: 600;">
+                    <h1>
                         Discover inspiring stories, insightful articles, and a community of passionate writers at our blog!
                     </h1>
     
-                    <p style="font-size: 1.5vw;">
+                    <p>
                         Join our community and start sharing your favourite thoughts with enthusiasts from every topic all over the world
                     </p>
     
@@ -35,7 +35,7 @@
         </div>
 
         <div id="page-2">
-            <h1 style="text-align: left; padding-left: 10vw; font-size: 3vw; font-weight: 400;">Featured Post</h1>
+            <h1>Featured Post</h1>
             <div id="blogs">
             <% let j = 1 %>
             <% for (let blog of blogs) { %>
@@ -55,7 +55,7 @@
         </div>
 
         <div id="page-3">
-            <h1 style="text-align: right; padding-right: 10vw; font-size: 3vw; font-weight: 400; width: 100%;">Latest Post</h1>
+            <h1>Latest Post</h1>
             <div id="blogs">
                 <% let i = 1 %>
                 <% for (let blog of blogs) { %>
@@ -77,8 +77,8 @@
         <div id="page-4">
             <div id="page-4-part1">
                 <div class="page-4-text">
-                    <h1 style="font-size: 3vw; font-weight: 400; text-align: left; width: 100%;">About Medium</h1>
-                    <p style="font-size: 1.5vw;">Welcome to our blog! Here, we embark on a journey through captivating narratives, insightful analyses, and thought-provoking discussions. From exploring the latest trends to delving into timeless wisdom, our blog is a haven for curiosity seekers, knowledge enthusiasts, and anyone hungry for inspiration. Join us in this enriching adventure!</p>
+                    <h1>About Medium</h1>
+                    <p>Welcome to our blog! Here, we embark on a journey through captivating narratives, insightful analyses, and thought-provoking discussions. From exploring the latest trends to delving into timeless wisdom, our blog is a haven for curiosity seekers, knowledge enthusiasts, and anyone hungry for inspiration. Join us in this enriching adventure!</p>
                 </div>
 
                 <div class="page-4-img">
@@ -93,8 +93,8 @@
                 </div>
 
                 <div class="page-4-text">
-                    <h1 style="font-size: 2vw; font-weight: 400; text-align: left; width: 100%;">Discover Everyhting About Us</h1>
-                    <p style="font-size: 1.2vw;">Stay in the loop and never miss a beat! Enter your email to unlock exclusive updates, exciting news, and insider insights delivered straight to your inbox. Join our vibrant community and be the first to know about all the latest happenings!</p>
+                    <h1>Discover Everyhting About Us</h1>
+                    <p>Stay in the loop and never miss a beat! Enter your email to unlock exclusive updates, exciting news, and insider insights delivered straight to your inbox. Join our vibrant community and be the first to know about all the latest happenings!</p>
                     <div class="inp">
                         <input type="text" placeholder="Reach Out To us!!">
                         <button type="submit">Sign Up</button>
@@ -105,5 +105,9 @@
     </main>
 
     <%- include('./partials/footer.ejs') %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/a84a69e726.js" crossorigin="anonymous"></script>
+    <script src="/js/nav.js"></script>
+    
 </body>
 </html>
