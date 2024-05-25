@@ -40,8 +40,7 @@
                     <div class="content">
                         <p><%= blog.content %></p>
                         <div class="functions">
-                            <button class="like-btn"><i class="fa-regular fa-thumbs-up"></i><span class="like" data-id="<%= blog._id %>"><%= blog.likes %></span></button>
-                            <button class="dislike-btn"><i class="fa-regular fa-thumbs-down"></i><span class="dislike" data-id="<%= blog._id %>"><%= blog.dislikes %></span></button>
+                            <button class="like-btn"><i class="fa-regular fa-heart"></i><span class="like" data-id="<%= blog._id %>"><%= blog.likes %></span></button>
                             <button class="read"><a href="blogs/<%= blog._id %>">Read More</a></button>
                         </div>
                     </div>

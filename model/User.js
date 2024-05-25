@@ -11,10 +11,6 @@ let UserSchema = new Schema({
         type : mongoose.Schema.Types.ObjectId ,
         ref : "blog"
     }] ,
-    dislikes : [{
-        type : mongoose.Schema.Types.ObjectId ,
-        ref : "blog"
-    }] ,
     created : [
         {
             type : mongoose.Schema.Types.ObjectId ,

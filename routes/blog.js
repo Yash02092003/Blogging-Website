@@ -62,37 +62,24 @@ router.get('/blogs/:id/like' , isLoggedIn ,  async (req , res) => {
     const { id } = req.params;
     const blog = await Blog.findById(id);
     const user = await User.findById(req.user._id);
+    const isLiked = user.likes.includes(id);
+    if(isLiked){
+        blog.likes = blog.likes - 1;
+        blog.save();
+        await User.findByIdAndUpdate(req.user._id , {
+            $pull : {likes : id}
+        })
 
-    const alreadyLiked = user.likes.some(likedBlog => likedBlog.equals(blog._id));
-
-    if (!alreadyLiked) {
-        blog.likes += 1;
-        await blog.save();
-
-        user.likes.push(blog);
-        await user.save();
     }
-
-    res.json({ likes: blog.likes });
-})
-
-router.get('/blogs/:id/dislike' , isLoggedIn ,  async (req , res) => {
-    const { id } = req.params;
-    const blog = await Blog.findById(id);
-    const user = await User.findById(req.user._id);
-
-    const alreadydisLiked = user.dislikes.some(disLikedBlog => disLikedBlog.equals(blog._id));
-    const alreadyLiked = user.likes.some(likedBlog => likedBlog.equals(blog._id));
-
-    if (!alreadydisLiked && !alreadyLiked) {
-        blog.dislikes += 1;
-        await blog.save();
-
-        user.dislikes.push(blog);
-        await user.save();
+    else{
+        blog.likes = blog.likes + 1;
+        blog.save();
+        await User.findByIdAndUpdate(req.user._id , {
+            $addToSet : {likes : id}
+        })
+        
     }
-    
-    res.json({ dislikes: blog.dislikes });
+    res.json({likes : blog.likes})
 })
 
 

@@ -91,3 +91,85 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
+
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 90%;
+        padding: 1em;
+    }
+
+    .user-info h1 {
+        font-size: 2em;
+    }
+
+    .user-info h2 {
+        font-size: 1.2em;
+    }
+
+    .blogs-section h2 {
+        font-size: 1.5em;
+    }
+
+    .blogs-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+        padding: 1.5em;
+    }
+
+    .blog-card {
+        padding: 0.75em;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    main {
+        padding: 1em;
+    }
+
+    .dashboard-container {
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    .user-info h1 {
+        font-size: 1.5em;
+    }
+
+    .user-info h2 {
+        font-size: 1em;
+    }
+
+    .blogs-section h2 {
+        font-size: 1.2em;
+    }
+
+    .blogs-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .card {
+        padding: 1em;
+    }
+
+    .blog-card {
+        padding: 0.5em;
+    }
+
+    .blog-card h3 {
+        font-size: 1em;
+    }
+
+    .blog-card p {
+        font-size: 0.9em;
+    }
+
+    .blog-card a {
+        padding: 0.5em;
+    }
+}

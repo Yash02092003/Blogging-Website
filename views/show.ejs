@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/blog.css">
+    <link rel="icon" href="/assessts/medium.png">
 </head>
 <body>
     <%- include('./partials/nav.ejs') %>
@@ -18,8 +19,7 @@
             <div class="blog-c-1">
                 <p><%= blog.content  %></p>
                 <div class="lk-dlk">
-                <span><i class="fa-solid fa-thumbs-up"></i><%= blog.likes %></span>
-                <span><i class="fa-solid fa-thumbs-down"></i><%= blog.dislikes %></span>
+                <span> <i class="fa-solid fa-thumbs-up"></i> <%= blog.likes %></span>
                 </div>
             </div>
         <div class="functions">

@@ -13,6 +13,8 @@
         </div>
     
         <div id="nav-part3">
+
+            
     
             <% if(!currentUser) { %>
             <button><a href="/login">Login</a></button>
@@ -28,6 +30,10 @@
     
             <% if(currentUser) { %>
                 <button style="background-color: white;"><a href="/logout" style="color: black;">Logout</a></button>
+            <% } %>
+
+            <% if(currentUser) { %>
+               <a href="/user" style="color: white; font-size: 25px;"><i class="fa-regular fa-user"></i></a>
             <% } %>
         </div>
     </div>
@@ -63,6 +69,10 @@
                         <button style="background-color: white;"><a href="/logout" style="color: black;">Logout</a></button>
                     <% } %>
             </div>
+            
+            <% if(currentUser) { %>
+                <a href="/user" style="color: white; font-size: 15px;"><i class="fa-regular fa-user"></i></a>
+             <% } %>
 
             <i class="fa-solid fa-bars"></i>
         </div>

@@ -5,25 +5,23 @@ blogsContainer.addEventListener('click', async (e) => {
         const blogDiv = e.target.closest('.blog');
         const blogId = blogDiv.getAttribute('data-id');
         const likeSpan = blogDiv.querySelector('.like');
+        const icon = e.target.closest('i')
 
         try {
             const res = await fetch(`/blogs/${blogId}/like`)
             const data = await res.json();
             likeSpan.textContent = data.likes;
-        } catch (error) {
-                console.error('Error:', error);
+            if(icon.classList.contains('fa-regular')){
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+            }
+            else{
+                icon.classList.remove('fa-solid');
+                icon.classList.add('fa-regular');
+            }
+        } 
+        catch (error) {
+            window.location.href = 'http://localhost:8080/login';
         }
-    } else if (e.target.closest('.dislike-btn')) {
-        const blogDiv = e.target.closest('.blog');
-        const blogId = blogDiv.getAttribute('data-id');
-        const dislikeSpan = blogDiv.querySelector('.dislike');
-
-        try {
-            const res = await fetch(`/blogs/${blogId}/dislike`);
-            const data = await res.json();
-            dislikeSpan.textContent = data.dislikes;
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
+    } 
 });

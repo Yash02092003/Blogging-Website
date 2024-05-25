@@ -116,3 +116,88 @@ main {
 footer{
     margin-top: 0;
 }
+
+media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-header p {
+        font-size: 1em;
+    }
+
+    .team-section h2 {
+        font-size: 2em;
+    }
+
+    .team-member {
+        width: 45%;
+        margin: 10px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-section p {
+        font-size: 1em;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .about-header h1 {
+        font-size: 2em;
+    }
+
+    .about-header p {
+        font-size: 0.9em;
+    }
+
+    .team-section h2 {
+        font-size: 1.5em;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .team-member img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .team-member h3 {
+        font-size: 1.2em;
+    }
+
+    .team-member p {
+        font-size: 0.9em;
+    }
+
+    .cta-section {
+        padding: 15px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8em;
+    }
+
+    .cta-section p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
